@@ -1,0 +1,1064 @@
+[
+    {
+        "chartId": "6411867", 
+        "asin": "0594033926", 
+        "prices": [
+            {
+                "date": "20140905", 
+                "priceUsed": 6.79, 
+                "priceNew": 8.75
+            }, 
+            {
+                "date": "20121214", 
+                "priceUsed": 6.79, 
+                "priceNew": 8.75
+            }, 
+            {
+                "date": "20150603", 
+                "priceUsed": 6.79, 
+                "priceNew": 19.99
+            }, 
+            {
+                "date": "20150126", 
+                "priceUsed": 6.79, 
+                "priceNew": 8.75
+            }, 
+            {
+                "date": "20150526", 
+                "priceUsed": 6.79, 
+                "priceNew": 19.99
+            }
+        ]
+    }, 
+    {
+        "chartId": "4137707", 
+        "asin": "0594451647", 
+        "prices": [
+            {
+                "date": "20131210", 
+                "priceUsed": 34.99, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20131218", 
+                "priceUsed": 29.98, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20140726", 
+                "priceUsed": 30.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20131209", 
+                "priceUsed": 34.99, 
+                "priceNew": 49.82
+            }, 
+            {
+                "date": "20140827", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140725", 
+                "priceUsed": 38.9, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140219", 
+                "priceUsed": 49.99, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20131217", 
+                "priceUsed": 29.99, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20140514", 
+                "priceUsed": 49.99, 
+                "priceNew": 47.43
+            }, 
+            {
+                "date": "20140206", 
+                "priceUsed": 49.99, 
+                "priceNew": 54.99
+            }, 
+            {
+                "date": "20140906", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140211", 
+                "priceUsed": 46.46, 
+                "priceNew": 54.99
+            }, 
+            {
+                "date": "20140205", 
+                "priceUsed": 49.99, 
+                "priceNew": 54.99
+            }, 
+            {
+                "date": "20140914", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140620", 
+                "priceUsed": 39.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20131209", 
+                "priceUsed": 24.99, 
+                "priceNew": 39.99
+            }, 
+            {
+                "date": "20140907", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140612", 
+                "priceUsed": 30.0, 
+                "priceNew": 44.99
+            }, 
+            {
+                "date": "20140312", 
+                "priceUsed": 32.34, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140308", 
+                "priceUsed": 29.5, 
+                "priceNew": 42.95
+            }, 
+            {
+                "date": "20121214", 
+                "priceUsed": 39.99, 
+                "priceNew": 39.99
+            }, 
+            {
+                "date": "20140108", 
+                "priceUsed": null, 
+                "priceNew": null
+            }, 
+            {
+                "date": "20140120", 
+                "priceUsed": 49.99, 
+                "priceNew": 67.94
+            }, 
+            {
+                "date": "20140825", 
+                "priceUsed": 38.45, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140407", 
+                "priceUsed": 49.99, 
+                "priceNew": 47.01
+            }, 
+            {
+                "date": "20140824", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140323", 
+                "priceUsed": 25.5, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20131219", 
+                "priceUsed": 29.98, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20140822", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140308", 
+                "priceUsed": 29.5, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140905", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20130830", 
+                "priceUsed": 39.99, 
+                "priceNew": 39.99
+            }, 
+            {
+                "date": "20140904", 
+                "priceUsed": 37.41, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140514", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140916", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20131125", 
+                "priceUsed": 39.99, 
+                "priceNew": 39.99
+            }, 
+            {
+                "date": "20140905", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20131217", 
+                "priceUsed": 31.95, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20140405", 
+                "priceUsed": 49.99, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140915", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140309", 
+                "priceUsed": 32.34, 
+                "priceNew": 48.5
+            }, 
+            {
+                "date": "20140416", 
+                "priceUsed": 32.9, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140914", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140312", 
+                "priceUsed": 32.34, 
+                "priceNew": 48.5
+            }, 
+            {
+                "date": "20140109", 
+                "priceUsed": null, 
+                "priceNew": 74.98
+            }, 
+            {
+                "date": "20140828", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140822", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140208", 
+                "priceUsed": 46.46, 
+                "priceNew": 53.99
+            }, 
+            {
+                "date": "20140310", 
+                "priceUsed": 32.34, 
+                "priceNew": 48.5
+            }, 
+            {
+                "date": "20131213", 
+                "priceUsed": 34.99, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140905", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140409", 
+                "priceUsed": 24.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140407", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.95
+            }, 
+            {
+                "date": "20140114", 
+                "priceUsed": 49.99, 
+                "priceNew": 69.95
+            }, 
+            {
+                "date": "20140912", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140622", 
+                "priceUsed": 38.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140911", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140405", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.95
+            }, 
+            {
+                "date": "20140826", 
+                "priceUsed": 38.45, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140825", 
+                "priceUsed": 38.45, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140906", 
+                "priceUsed": 38.9, 
+                "priceNew": 34.99
+            }, 
+            {
+                "date": "20140413", 
+                "priceUsed": 49.99, 
+                "priceNew": 47.01
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20131211", 
+                "priceUsed": 34.99, 
+                "priceNew": 56.49
+            }, 
+            {
+                "date": "20140721", 
+                "priceUsed": 39.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140313", 
+                "priceUsed": 32.34, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140104", 
+                "priceUsed": 24.99, 
+                "priceNew": null
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140915", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140907", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140825", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140111", 
+                "priceUsed": 49.99, 
+                "priceNew": 59.95
+            }, 
+            {
+                "date": "20140108", 
+                "priceUsed": 24.99, 
+                "priceNew": null
+            }, 
+            {
+                "date": "20140916", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140301", 
+                "priceUsed": 42.93, 
+                "priceNew": 38.5
+            }, 
+            {
+                "date": "20140825", 
+                "priceUsed": 38.45, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140207", 
+                "priceUsed": 47.64, 
+                "priceNew": 53.99
+            }, 
+            {
+                "date": "20140908", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20131219", 
+                "priceUsed": null, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20140422", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140319", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140205", 
+                "priceUsed": 49.99, 
+                "priceNew": 53.99
+            }, 
+            {
+                "date": "20140824", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140224", 
+                "priceUsed": 42.93, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20140320", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140903", 
+                "priceUsed": 37.41, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20131213", 
+                "priceUsed": 34.99, 
+                "priceNew": 56.49
+            }, 
+            {
+                "date": "20131206", 
+                "priceUsed": 34.99, 
+                "priceNew": 39.99
+            }, 
+            {
+                "date": "20140512", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140406", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.95
+            }, 
+            {
+                "date": "20140310", 
+                "priceUsed": 32.34, 
+                "priceNew": 42.95
+            }, 
+            {
+                "date": "20140730", 
+                "priceUsed": 25.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20131204", 
+                "priceUsed": 34.99, 
+                "priceNew": 44.99
+            }, 
+            {
+                "date": "20140211", 
+                "priceUsed": 46.46, 
+                "priceNew": 40.0
+            }, 
+            {
+                "date": "20140320", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140306", 
+                "priceUsed": 42.93, 
+                "priceNew": 48.5
+            }, 
+            {
+                "date": "20140917", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140913", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140911", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140816", 
+                "priceUsed": 35.0, 
+                "priceNew": 40.0
+            }, 
+            {
+                "date": "20140731", 
+                "priceUsed": 38.9, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20131224", 
+                "priceUsed": null, 
+                "priceNew": null
+            }, 
+            {
+                "date": "20140824", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140220", 
+                "priceUsed": 49.99, 
+                "priceNew": 38.99
+            }, 
+            {
+                "date": "20140405", 
+                "priceUsed": 49.99, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140409", 
+                "priceUsed": 24.99, 
+                "priceNew": 47.01
+            }, 
+            {
+                "date": "20140822", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140824", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140825", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140410", 
+                "priceUsed": 24.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140825", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140308", 
+                "priceUsed": 32.34, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140214", 
+                "priceUsed": 46.46, 
+                "priceNew": 35.95
+            }, 
+            {
+                "date": "20140826", 
+                "priceUsed": 29.95, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20131209", 
+                "priceUsed": 24.99, 
+                "priceNew": 49.82
+            }, 
+            {
+                "date": "20140323", 
+                "priceUsed": 25.5, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140910", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140913", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140918", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140321", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140301", 
+                "priceUsed": 42.93, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20140706", 
+                "priceUsed": 39.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140218", 
+                "priceUsed": 42.93, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20140201", 
+                "priceUsed": 49.99, 
+                "priceNew": 53.99
+            }, 
+            {
+                "date": "20140222", 
+                "priceUsed": 49.99, 
+                "priceNew": 39.5
+            }, 
+            {
+                "date": "20140321", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140220", 
+                "priceUsed": 49.99, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20140619", 
+                "priceUsed": 44.89, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140508", 
+                "priceUsed": 49.99, 
+                "priceNew": 35.99
+            }, 
+            {
+                "date": "20140903", 
+                "priceUsed": 37.33, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140825", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140909", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140122", 
+                "priceUsed": 49.99, 
+                "priceNew": 64.98
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140828", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140414", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140313", 
+                "priceUsed": 32.34, 
+                "priceNew": 45.5
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140318", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140223", 
+                "priceUsed": 49.99, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20140827", 
+                "priceUsed": 29.95, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140920", 
+                "priceUsed": 34.99, 
+                "priceNew": 45.99
+            }, 
+            {
+                "date": "20140207", 
+                "priceUsed": 47.64, 
+                "priceNew": 54.99
+            }, 
+            {
+                "date": "20140317", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20131224", 
+                "priceUsed": null, 
+                "priceNew": 64.95
+            }, 
+            {
+                "date": "20140906", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140211", 
+                "priceUsed": 46.46, 
+                "priceNew": 53.86
+            }, 
+            {
+                "date": "20140826", 
+                "priceUsed": 29.95, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140306", 
+                "priceUsed": 42.93, 
+                "priceNew": 39.95
+            }, 
+            {
+                "date": "20140311", 
+                "priceUsed": 32.34, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20140215", 
+                "priceUsed": 46.46, 
+                "priceNew": 39.79
+            }, 
+            {
+                "date": "20131201", 
+                "priceUsed": 34.99, 
+                "priceNew": 39.99
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140818", 
+                "priceUsed": 29.99, 
+                "priceNew": 40.0
+            }, 
+            {
+                "date": "20140310", 
+                "priceUsed": 32.34, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140406", 
+                "priceUsed": 49.99, 
+                "priceNew": 47.97
+            }, 
+            {
+                "date": "20140315", 
+                "priceUsed": 49.99, 
+                "priceNew": 45.5
+            }, 
+            {
+                "date": "20140918", 
+                "priceUsed": 36.44, 
+                "priceNew": 45.99
+            }, 
+            {
+                "date": "20140824", 
+                "priceUsed": 34.95, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20131210", 
+                "priceUsed": 34.99, 
+                "priceNew": 45.99
+            }, 
+            {
+                "date": "20140910", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140816", 
+                "priceUsed": 38.9, 
+                "priceNew": 40.0
+            }, 
+            {
+                "date": "20131210", 
+                "priceUsed": 34.99, 
+                "priceNew": 56.49
+            }, 
+            {
+                "date": "20140902", 
+                "priceUsed": 37.33, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140909", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20131208", 
+                "priceUsed": 24.99, 
+                "priceNew": 47.0
+            }, 
+            {
+                "date": "20140404", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.95
+            }, 
+            {
+                "date": "20140830", 
+                "priceUsed": 37.41, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20150526", 
+                "priceUsed": 28.99, 
+                "priceNew": 20.37
+            }, 
+            {
+                "date": "20140208", 
+                "priceUsed": 47.64, 
+                "priceNew": 53.99
+            }, 
+            {
+                "date": "20131221", 
+                "priceUsed": null, 
+                "priceNew": 64.95
+            }, 
+            {
+                "date": "20140305", 
+                "priceUsed": 22.0, 
+                "priceNew": 35.95
+            }, 
+            {
+                "date": "20140313", 
+                "priceUsed": 32.34, 
+                "priceNew": 48.4
+            }, 
+            {
+                "date": "20140822", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140307", 
+                "priceUsed": 29.5, 
+                "priceNew": 48.5
+            }, 
+            {
+                "date": "20150603", 
+                "priceUsed": 28.99, 
+                "priceNew": 20.37
+            }, 
+            {
+                "date": "20140823", 
+                "priceUsed": 38.9, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140613", 
+                "priceUsed": 30.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140410", 
+                "priceUsed": 24.99, 
+                "priceNew": 47.01
+            }, 
+            {
+                "date": "20140908", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140818", 
+                "priceUsed": 29.99, 
+                "priceNew": 46.95
+            }, 
+            {
+                "date": "20140319", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }, 
+            {
+                "date": "20140405", 
+                "priceUsed": 49.99, 
+                "priceNew": 48.95
+            }, 
+            {
+                "date": "20140927", 
+                "priceUsed": 33.99, 
+                "priceNew": 45.99
+            }, 
+            {
+                "date": "20140624", 
+                "priceUsed": 34.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140901", 
+                "priceUsed": 37.35, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20131205", 
+                "priceUsed": 34.99, 
+                "priceNew": 39.99
+            }, 
+            {
+                "date": "20131216", 
+                "priceUsed": 33.0, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20131205", 
+                "priceUsed": 34.99, 
+                "priceNew": 38.0
+            }, 
+            {
+                "date": "20140912", 
+                "priceUsed": 36.44, 
+                "priceNew": 46.99
+            }, 
+            {
+                "date": "20140720", 
+                "priceUsed": 30.0, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20140125", 
+                "priceUsed": 49.99, 
+                "priceNew": 59.0
+            }, 
+            {
+                "date": "20140406", 
+                "priceUsed": 49.99, 
+                "priceNew": 49.95
+            }, 
+            {
+                "date": "20131212", 
+                "priceUsed": 34.99, 
+                "priceNew": 55.87
+            }, 
+            {
+                "date": "20140206", 
+                "priceUsed": 49.99, 
+                "priceNew": 53.99
+            }, 
+            {
+                "date": "20140413", 
+                "priceUsed": 49.99, 
+                "priceNew": 46.79
+            }
+        ]
+    }
+]

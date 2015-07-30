@@ -1,0 +1,288 @@
+---
+title: "Analysis of prices and Reviews"
+output: html_document
+---
+
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,dpi=144, fig.path='Figs/',
+                      echo=FALSE, warning=FALSE, message=FALSE)
+options(scipen=999)
+options(digits=2)
+library(plyr)
+library(rmongodb)
+library(dplyr)
+library(sqldf)
+library(plotrix)
+library(latticeExtra)
+library(ggplot2)
+library(rjson)
+
+
+```
+
+```{r, echo=FALSE}
+
+prices <- read.csv('/media/jupiter/hadoopuser/data/drill_prices_table.csv')
+reviews<-read.csv('/media/jupiter/hadoopuser/data/drill_reviews_table.csv')
+meta_drill_info <- read.csv("/media/jupiter/hadoopuser/data/meta_drills.csv")
+
+
+p_count=as.data.frame(table(prices$asin[!is.na(prices$priceNew)]))
+
+print("Histogram of the Number of New Price Changes")
+hist(p_count$Freq, breaks=100)
+
+
+prices$date<-strptime(prices$date,"%Y%m%d")
+
+prices<-prices[order(prices$asin,prices$date),]
+#Create lag date and price
+prices$date<-as.Date(prices$date)
+prices2 <- 
+  prices %>%
+  group_by(asin) %>%
+  mutate(lag.priceNew = lag(priceNew, 1), lag.date=lag(date,1))
+
+
+prices2<-prices2[!is.na(prices$priceNew),]
+
+
+prices2$date_diff<-as.numeric(prices2$date-prices2$lag.date)
+prices2$price_diff<-prices2$priceNew-prices2$lag.priceNew
+
+PctChange<-(prices2$priceNew-prices2$lag.priceNew)/prices2$lag.priceNew
+prices2$pctChange<-PctChange
+
+
+hist(as.numeric(prices2$pctChange), breaks=50, xlim=c(-.5,.5), xlab="Price % Change", main="Percent Price Changes \n (includes days some days with NO change)")
+hist(as.numeric(prices2$pctChange[prices2$pctChange!=0]), breaks=50, xlim=c(-1,1), xlab="Price % Change", main="Price % Change \n (does NOT includes days some days with NO change)")
+
+hist(as.numeric(prices2$date_diff[prices2$date_diff<100]), breaks =50, main="Number of days between recorded price")
+hist(as.numeric(prices2$date_diff[prices2$date_diff<100 & prices2$date_diff!=0]), breaks =50, main="Number of days between recorded price \n (No change days excluded)")
+
+
+```
+
+##### Average #of days Between Price Changes
+```{r, echo=F, warning=F}
+avg_dates<- sqldf("select asin, avg(date_diff) as avg_diff 
+                  from prices2 group by asin
+                  having count(*)>=30")
+
+avgChangeDays<-round(as.numeric(avg_dates$avg_diff[complete.cases(avg_dates$avg_diff)]))
+table(avgChangeDays)
+hist(avgChangeDays,breaks=35, main="Average # of Days Between Price Changes \n (products with more than 30 changes)")
+
+avg_dates<- sqldf("select asin, avg(date_diff) as avg_diff 
+                  from prices2 group by asin
+                  ")
+
+avgChangeDays<-round(as.numeric(avg_dates$avg_diff[complete.cases(avg_dates$avg_diff)&as.numeric(avg_dates$avg_diff)<30]))
+table(avgChangeDays)
+hist(avgChangeDays, breaks=30, main="Average # of Days Between Price Changes ")
+                         
+
+prices2<-prices2[prices2$date_diff<300,]
+```
+
+####avg and std dev for price changes and #of days between price diffs for each product
+```{r,echo=FALSE}
+price_agg<-aggregate(prices2[, c("price_diff")],  by=list(prices2$asin), function(x) c(price_diff_mean=round(mean(x,na.rm=T),1), price_diff_std=round(sd(x,na.rm=T),1), n=length(x) ) )
+
+price_agg <- cbind(price_agg[-ncol(price_agg)], price_agg[[ncol(price_agg)]])
+
+
+price_agg1<-aggregate(prices2[, c("date_diff")],  by=list(prices2$asin), function(x) c(date_diff_mean=round(mean(x,na.rm=T),1), date_diff_std=round(sd(x,na.rm=T),1) ) )
+
+
+price_agg1 <- cbind(price_agg1[-ncol(price_agg1)], price_agg1[[ncol(price_agg1)]])
+
+price_agg_dates<-aggregate(prices2[, c("date")],  by=list(prices2$asin), function(x) c(maxdate=format(max(x),"%Y-%m-%d"), mindate=format(min(x),"%Y-%m-%d") ) )
+
+price_agg_dates <- cbind(price_agg_dates[-ncol(price_agg_dates)], price_agg_dates[[ncol(price_agg_dates)]])
+
+price_aggs<-merge(price_agg,price_agg1)
+price_ranges<-merge(price_aggs, price_agg_dates)
+colnames(price_ranges)[colnames(price_ranges) == 'Group.1'] <- 'asin'
+print(price_ranges)
+
+
+options(digits=2)
+prices2<-prices2[prices2$date_diff<300,]
+```
+
+
+###avg and std dev for price changes and #of days between price diffs for each product
+```{r,echo=FALSE}
+price_agg<-aggregate(prices2[, c("price_diff")],  by=list(prices2$asin), function(x) c(price_diff_mean=round(mean(x,na.rm=T),1), price_diff_std=round(sd(x,na.rm=T),1), n=length(x) ) )
+
+price_agg <- cbind(price_agg[-ncol(price_agg)], price_agg[[ncol(price_agg)]])
+
+
+price_agg1<-aggregate(prices2[, c("date_diff")],  by=list(prices2$asin), function(x) c(date_diff_mean=round(mean(x,na.rm=T),1), date_diff_std=round(sd(x,na.rm=T),1) ) )
+
+
+price_agg1 <- cbind(price_agg1[-ncol(price_agg1)], price_agg1[[ncol(price_agg1)]])
+
+price_agg_dates<-aggregate(prices2[, c("date")],  by=list(prices2$asin), function(x) c(maxdate=format(max(x),"%Y-%m-%d"), mindate=format(min(x),"%Y-%m-%d") ) )
+
+price_agg_dates <- cbind(price_agg_dates[-ncol(price_agg_dates)], price_agg_dates[[ncol(price_agg_dates)]])
+
+price_aggs<-merge(price_agg,price_agg1)
+price_ranges<-merge(price_aggs, price_agg_dates)
+colnames(price_ranges)[colnames(price_ranges) == 'Group.1'] <- 'asin'
+#print(price_ranges)
+
+```
+```{r, echo=FALSE, include=FALSE}
+reviews$date<-gsub(",","",as.character(reviews$reviewDate))
+reviews$date<-as.Date(reviews$date, format=" %B %e %Y")
+
+#getting info on previous reviews
+
+reviews<-reviews[order(reviews$asin,reviews$date),]
+reviews2 <- 
+  reviews %>%
+  group_by(asin) %>%
+  mutate(lag_reviewStars = lag(reviewStars, 1), lag_date=lag(date,1))
+
+reviews2[,c("date","lag_date")]
+
+date_diff<-abs(reviews2$date-reviews2$lag_date)
+length(date_diff)
+reviews2$date_diff<-as.numeric(date_diff)
+length(reviews2$date_diff)
+hist(reviews2$date_diff[reviews2$date_diff<=30], breaks=30)
+
+meta_drill_info$dateFirstAvailable<-gsub(",","",as.character(meta_drill_info$dateFirstAvailable))
+meta_drill_info$dateFirstAvailable<-as.Date(meta_drill_info$dateFirstAvailable, format=" %B %e %Y")
+age<-Sys.Date()-meta_drill_info$dateFirstAvailable
+meta_drill_info$age<-as.numeric(age)
+
+reviews<- sqldf("select a.* , b.age 
+                from reviews2 as a 
+                left join meta_drill_info as b 
+                on a.asin=b.asin ")
+nrow(reviews)
+#335 > 100days and 1.3k>30days, 111 NA
+
+plot(reviews$age, reviews$date_diff, main="Product Age vs Review Frequency ",
+   xlab="Age (days) ", ylab="(days b/w reviews ", pch=1) 
+test<-reviews[reviews$date>'2012-06-01',]
+plot(test$age, test$date_diff, main="Product Age vs Review Frequency \n (Reviews after 2012-06) ",
+   xlab="Age (days) ", ylab="(days b/w reviews ", pch=1) 
+
+
+asins <- sapply(meta_drill_info$asin, as.character)
+reviews_cum<-c()
+for (i in 1:length(asins)){
+
+    sub_asin<-reviews[reviews$asin==asins[i],]
+    for(j in 1:nrow(sub_asin)){
+        if (j==1){
+              sum_Stars <-0
+              max_star<- 0
+              min_star<-5
+        }      
+              sub_asin$reviewCount[j]<-j
+              sum_Stars <- sum_Stars + sub_asin$reviewStars[j]
+              sub_asin$avg_reviewStars[j]<-  sum_Stars /j
+              min_star <- min(min_star,sub_asin$reviewStars[j])
+              sub_asin$min_star[j] <- min_star
+              max_star <- max(max_star,sub_asin$reviewStars[j])
+              sub_asin$max_star[j] <- max_star
+              
+    }
+    reviews_cum<-rbind(reviews_cum,sub_asin)
+}
+
+reviews_cum <- reviews_cum[order(reviews_cum$asin,reviews_cum$date),]
+review_cum2 <- reviews_cum %>% group_by(asin) %>%
+  mutate(lag_reviewCount = lag(reviewCount, 1), lag_avg_reviewStars=lag(avg_reviewStars,1),
+         lag_min_star=lag(min_star,1),lag_max_star=lag(max_star,1))
+
+
+#cumulated counts and lag by asin,date
+reviews_dates<- sqldf("select *  from  review_cum2 
+                       group by asin, date
+                      having max(reviewCount)")
+
+reviews_dates[50:55,]
+
+```
+
+
+##New and Used Prices along with number of reviews by date by product
+```{r ,echo=FALSE, include=FALSE}
+
+prices3<-prices[(!is.na(prices$priceUsed) & prices$date >='2013-01-01'),]
+
+reviews_dates2<-reviews_dates[reviews_dates$date>='2012-06-01',]
+
+
+newPrices<-prices2
+newPrices$priceType<-"New"
+newPrices$price<-newPrices$priceNew
+newPrices <- subset(newPrices, select = c(price, priceType, asin, date) )
+
+usedPrices<-prices3
+usedPrices$priceType<-"Used"
+usedPrices$price<-usedPrices$priceUsed
+usedPrices <- subset(usedPrices, select = -c(priceNew, priceUsed) )
+allPrices <- rbind(newPrices,usedPrices)
+allPrices<-allPrices[complete.cases(allPrices),]
+```
+
+```{r ,echo=FALSE, warnings=F,fig.width=6, fig.height=6}
+
+
+#loop through all ids and print output
+#length(asins): length(asins)
+
+
+asins <- sapply(meta_drill_info$asin, as.character)
+
+for (i in 1:length(asins)){
+  
+    asin<- paste(asins[i],'\n')
+    asin_price<-allPrices[allPrices$asin==asins[i],]
+    if(is.data.frame(asin_price)& ("Used" %in% asin_price$priceType)){
+    obj1 <- xyplot(price ~ date, asin_price , 
+                   ylab="Price", type = "l", 
+                   group=priceType,
+                   main=list(label=paste(bquote(.(asin)), meta_drill_info[meta_drill_info$asin==asins[i],]$productTitle), cex=1),
+            auto.key=list(space="top", columns=2,  title="Price Type", cex.title=1,  lines=TRUE,points=FALSE),  
+            par.settings = list(superpose.line = list(col = c("black", "purple"))))
+    
+    
+    obj2 <- xyplot(reviewStars ~ date, reviews[reviews$asin==asins[i],], ylab="Review Stars", type = "p", groups=reviewStars)
+    
+    ## double axis with a key
+    plot1<-doubleYScale(obj1, obj2, use.style=F, add.ylab2 = TRUE)
+
+    print(plot1)
+  
+  } else if (is.data.frame(asin_price)& !("Used" %in% asin_price$priceType)){
+    obj1 <- xyplot(price ~ date, asin_price , type = "l", ylab="Price",
+            main=list(label=paste(bquote(.(asin)), meta_drill_info[meta_drill_info$asin==asins[i],]$productTitle), cex=1),
+            par.settings = list(superpose.line = list(col = c("black"))))
+    
+    
+    
+    
+    obj2 <- xyplot(reviewStars ~ date, reviews[reviews$asin==asins[i],], 
+                   type = "p", groups=reviewStars, ylab="Review Stars")
+    
+    ## double axis with a key
+    plot1<-doubleYScale(obj1, obj2,use.style=F, add.ylab2 = TRUE)
+
+
+  print(plot1)
+  }
+
+}
+
+```
+
+

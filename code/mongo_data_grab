@@ -1,0 +1,8 @@
+
+
+db.electronics_2014.aggregate([{$group: {_id:"$asin", minDate: {$min:"$unixReviewTime"}, count: {$sum:1}}},{$out: "electronics_mindate"}],{allowDiskUse:true})
+
+mongoexport -d amazon -c scrape_ids -f "$_id" --csv > results.csv
+
+mongoimport --db amazon --collection  meta_Electronics --file "/media/jupiter/hadoopuser/meta_Electronics.json"
+

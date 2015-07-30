@@ -1,0 +1,49 @@
+db.comments.find({product_id: "1565124995"})
+db.comments.findOne({time:{ $gt: 1322611200 }})
+db.comments.count();
+db.comments.aggregate();
+db.comments.ensureIndex({"user_id":1});
+db.comments.find({time: {$gt: 1360696800}}).count()
+#make new collection
+db.comments.find( { time: {$gt: 1360696800 } } ).forEach( function(doc) { db.small.insert(doc); } );
+db.comments.find({product_id: {$gt: "0000000001"}}).limit(10)
+ 
+
+#export data to csv
+mongoexport -d amazon -c scrape_ids2 -f _id --type=csv
+
+
+#create new dataset with sum across groups
+db.electronics_2014.aggregate([{$group: {_id:"$asin", minDate: {$min:"$unixReviewTime"}, count: {$sum:1}}},{$out: "electronics_mindate"}],{allowDiskUse:true})
+
+
+
+for (key in db.collection.findOne())print(key);
+
+
+Describing data
+ getIndexes() 
+
+db.scrape_ids2.find({_id: {$in: [/^B/,/^0/]}})
+
+
+#add new field to every document
+#In the  example below last 2 fields false, true specifies the upsert and multi flags
+db.collectionName.update({},{$set: {"grouperKey":1}}, false, true)
+#then sum field value over entire data set
+db.scrape_ids2.aggregate([{$group: {_id: "$grouperKey", total: {$sum: "$count"}}}])
+
+
+#grab unique ids and assign them to a variable
+var test=db.scrape_ids2.distinct("_id")
+#look for ids that match the array of ids from the previous step
+db.scrape_ids2.find({_id: {$in: test}})
+#match with main dataset and write records to new collection
+db.electronics_2014.find({asin: {$in: test}}).forEach(function(doc){db.reviews_electronics.insert(doc);});
+
+
+
+#create a collection from json file output in python(run outside shell)
+mongoimport --db amazon --collection mongotools  --file "/media/jupiter/hadoopuser/data/electronics_prices.json" --jsonArray
+
+
