@@ -61,7 +61,8 @@ hist(as.numeric(prices2$pctChange[prices2$pctChange!=0]), breaks=50, xlim=c(-1,1
 hist(as.numeric(prices2$date_diff[prices2$date_diff<100]), breaks =50, main="Number of days between recorded price")
 hist(as.numeric(prices2$date_diff[prices2$date_diff<100 & prices2$date_diff!=0]), breaks =50, main="Number of days between recorded price \n (No change days excluded)")
 
-
+varlist <- names(data)
+length(varlist)
 ```
 
 ##### Average #of days Between Price Changes
@@ -282,6 +283,9 @@ for (i in 1:length(asins)){
   }
 
 }
+
+
+
 
 ```
 
